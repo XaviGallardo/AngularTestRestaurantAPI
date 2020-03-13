@@ -13,6 +13,7 @@ var usersRouter = require('./routes/users');
 var itemsRouter = require('./routes/items');
 var customersRouter = require('./routes/customers');
 var ordersRouter = require('./routes/orders');
+var orderRouter = require('./routes/order');
 
 const cors = require('cors')({ origin: true, credentials: true });
 
@@ -55,6 +56,7 @@ app.use('/users', usersRouter);
 app.use('/items', itemsRouter);
 app.use('/customers', customersRouter);
 app.use('/orders', ordersRouter);
+app.use('/order', orderRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
